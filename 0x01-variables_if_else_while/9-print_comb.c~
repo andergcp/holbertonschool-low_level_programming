@@ -9,12 +9,16 @@
  */
 int main(void)
 {
-	char letter;
-	char number;
-	for (number = '0' ; number <= '9' ; number++)
-		putchar(number);
-	for (letter = 'a'; letter <= 'f'; letter++)
-		putchar(letter);
+	int number;
+	number = 0;
+	number++;
+/**	for (number = 0; number <= 9; number++)
+		putchar('0' + number);
+	putchar(', ');
+	putchar('\n');
+*/
+	while (number <= 9)
+		putchar('0' + number);
 	putchar('\n');
 	return (0);
 }
