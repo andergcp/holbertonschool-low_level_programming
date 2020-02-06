@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+/*Main Zero task of Holberton Low level programming project */
 
-/* It show us if a random number is positive, negative or zero */
+/* Main: It show us if a random number is positive, negative or zero. */
 int main(void)
 {
 int n;
@@ -12,7 +12,7 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n == 0)
 {
-printf("is zero\n");
+printf("%i is zero\n", n);
 }
 else if (n > 0)
 {
