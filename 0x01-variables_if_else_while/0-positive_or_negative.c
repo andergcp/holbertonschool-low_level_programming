@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*Main Zero task of Holberton Low level programming project */
-
-/* Main: It show us if a random number is positive, negative or zero. */
+/**
+ *main - Entry point
+ *
+ *Description: This program will take a random number and display whether it is
+ *positive, negative, or zero.
+ *Return: Returns 0 upon successful run.
+ */
 int main(void)
 {
 int n;
