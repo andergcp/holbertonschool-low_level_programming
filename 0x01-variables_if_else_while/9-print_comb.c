@@ -10,10 +10,16 @@
 int main(void)
 {
 	int number;
-	number = 0;
-	for (number = 0; number <= 9; number++)
-		putchar('0' + number);
-	for (number = 0; number <= 9; number++)
-		putchar(' ');
+
+	for (number = '0'; number <= '9'; number++)
+	{
+		putchar(number);
+		if (number < '9')
+		{
+			putchar (',');
+			putchar (' ');
+		}
+	}
+	putchar('\n');
 	return (0);
 }
