@@ -20,6 +20,7 @@ int main(void)
 			putchar(y);
 			if (x != '8' || y != '9')
 				putchar(',');
+			if (x != '8' || y != '9')
 			putchar(' ');
 		}
 	}
