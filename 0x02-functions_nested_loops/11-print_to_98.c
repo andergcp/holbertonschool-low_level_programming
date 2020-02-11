@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * print_to_98 - print numbers till n.
+ * @n : int
  * Return: Always 0.
  */
 void print_to_98(int n)
