@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+/* This function prints the word "Holberton" */
 int main(void)
 {
 	_putchar('H');
