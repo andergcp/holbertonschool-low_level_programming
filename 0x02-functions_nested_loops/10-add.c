@@ -1,13 +1,15 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * add - sums two numbers
+ * @a : int
+ * @b : int
  * Return: Always 0.
  */
 int add(int a, int b)
 {
-        int result;
+	int result;
+
 	result = a + b;
-	return(result);
+	return (result);
 }
