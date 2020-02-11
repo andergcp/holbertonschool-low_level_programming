@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * jack_bauer - prints every minute of the day
+ * @void: void
+ * Return: a, b, c, d
+ **/
 void jack_bauer(void)
 {
 	int a;

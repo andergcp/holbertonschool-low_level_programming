@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * _isalpha: Verifies if c is an alpha char
- * Returns 1 if c is an alpha char otherwise 0
+ * _isalpha - Verifies if c is an alpha char
+ * Return: 1 if c is an alpha char otherwise 0
  * @c : int
  **/
 int _isalpha(int c)
