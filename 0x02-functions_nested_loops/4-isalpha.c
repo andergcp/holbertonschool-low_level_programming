@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * _isalpha: Verifies if c is an alpha char
+ * Returns 1 if c is an alpha char otherwise 0
+ * @c : int
+ **/
 int _isalpha(int c)
 {
 	if (c > 96 && c < 123)
