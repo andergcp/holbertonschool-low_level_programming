@@ -8,15 +8,17 @@
 int main(void)
 {
 	long n = 612852475143;
+	long apodo;
 	int d = 2;
 
-	while (n >= d)
+	for (apodo = n; apodo >= d; apodo++)
 	{
-		if (n % d == 0)
-			n = n / d;
+		if (apodo % d == 0)
+			apodo = apodo / d;
 		else
 			d++;
+		apodo--;
 	}
 	printf("%i\n", d);
-	return (0);
+	return(0);
 }
