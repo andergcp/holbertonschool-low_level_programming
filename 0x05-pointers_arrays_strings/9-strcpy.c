@@ -26,15 +26,15 @@ int _strlen(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
-	int n;
+	int i = 0;
 
-	n = _strlen(src);
+	while (*src != '\0')
+	{
+		*(dest + i) = *(src);
+		i++;
+		src++;
 
-	for (i = 0; i < n; i++)
-		dest[i] = src[i];
-	for ( ; i < n; i++)
-		dest[i] = '\0';
-
+	}
+	*(dest + i) = '\0';
 	return (dest);
 }
