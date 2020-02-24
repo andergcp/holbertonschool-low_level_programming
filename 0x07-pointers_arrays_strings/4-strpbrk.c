@@ -21,7 +21,8 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s++;
 	}
-	if (*s == '\n')
+	if (*s == '\0')
 		return (NULL);
-	return (s);
+	else
+		return (s);
 }
