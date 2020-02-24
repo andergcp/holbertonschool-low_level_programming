@@ -4,6 +4,7 @@
  * _strspn - gets the length of a prefix substring
  * @s: pointer to an array
  * @accept: pointer to a char
+ * Return: i
  **/
 
 unsigned int _strspn(char *s, char *accept)
