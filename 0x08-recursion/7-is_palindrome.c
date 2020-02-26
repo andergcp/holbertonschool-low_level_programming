@@ -26,10 +26,10 @@ int evaluate_palin(char *s, int beg, int end)
 		return (1);
 	else if (*(s + beg) == *(s + end))
 	{
-		return(evaluate_palin(s, beg + 1, end -1));
+		return (evaluate_palin(s, beg + 1, end - 1));
 	}
 	else
-		return(0);
+		return (0);
 }
 
 /**
@@ -41,5 +41,6 @@ int evaluate_palin(char *s, int beg, int end)
 int is_palindrome(char *s)
 {
 	int end = _strlen_recursion(s) - 1;
-	return(evaluate_palin(s, 0, end));
+
+	return (evaluate_palin(s, 0, end));
 }
