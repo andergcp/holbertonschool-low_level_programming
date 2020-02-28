@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+/**
+ * leet - encodes a string into 1337
+ * @a: pointer to a char
+ * Return: a
+ **/
+
+char *leet(char *a)
+{
+
+}
