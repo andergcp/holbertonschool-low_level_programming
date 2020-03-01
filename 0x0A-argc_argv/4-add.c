@@ -1,7 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
+/**
+ * _isdigit - Evaluates if a char is digit
+ * @a: char
+ * Return: int
+ **/
+
+int _isdigit(char i)
+{
+	if (i < 58 && i > 47)
+		return (1);
+	else
+		return (0);
+}
 /**
  * main - prints all arguments it receives
  * @argc: integer
@@ -19,7 +31,7 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((isdigit(*argv[i])) == 0)
+			if ((_isdigit(*argv[i])) == 0)
 			{
 				printf("Error\n");
 				return (1);
