@@ -3,19 +3,26 @@
 
 /**
  * _isdigit - Evaluates if a char is digit
- * @a: char
+ * @i: pointer to a char
  * Return: int
  **/
 
-int _isdigit(char i)
+int _isdigit(char *i)
 {
-	if (i < 58 && i > 47)
-		return (1);
-	else
-		return (0);
+	int n = 0;
+
+	while (i[n] != '\0')
+	{
+		if (i[n] < 58 && i[n] > 47)
+			n++;
+		else
+			return (0);
+	}
+	return (1);
 }
+
 /**
- * main - prints all arguments it receives
+ * main - Adds numbers it receives
  * @argc: integer
  * @argv: pointer to an array
  * Return: int
@@ -31,7 +38,7 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((_isdigit(*argv[i])) == 0)
+			if ((_isdigit(argv[i])) == 0)
 			{
 				printf("Error\n");
 				return (1);
