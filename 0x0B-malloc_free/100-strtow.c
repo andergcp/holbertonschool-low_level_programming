@@ -42,7 +42,7 @@ int count_chars(char *str, int word)
 
 	while (str[i])
 	{
-		if (j == word && str[i + 1] == ' ')
+		if (j == word && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			k++;
 			return (k);
