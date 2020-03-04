@@ -130,7 +130,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-	p[i] = malloc(sizeof(char) * 4);
+	p[i] = malloc(sizeof(char *) * 1);
 	for (m = 0; m < height - 1; m++)
 	{
 		size = count_chars(str, (m + 1));
