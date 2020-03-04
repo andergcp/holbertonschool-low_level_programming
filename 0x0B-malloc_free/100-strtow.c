@@ -93,7 +93,7 @@ int find_char(char *str, int m, int n)
 		i++;
 
 	}
-	return (0);
+	return (i - 1);
 }
 
 /**
