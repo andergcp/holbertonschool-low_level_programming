@@ -58,7 +58,6 @@ int count_chars(char *str, int word)
 			k = 0;
 		}
 		i++;
-
 	}
 	return (0);
 }
@@ -111,7 +110,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	height = count_words(str) + 1;
-	if (height == 0)
+	if (height - 1 == 0)
 	{
 		return (NULL);
 	}
