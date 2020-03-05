@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * lenx2 - calculate the size of two strings
+ * len - calculate the size of two strings
  * @p1: pointer to a char
  * @p2: pointer to a char
  * Return: int the size of p1 + p2
  **/
-int lenx2(char *p1, char *p2)
+int len(char *p1)
 {
 	int i = 0;
 
@@ -15,11 +15,6 @@ int lenx2(char *p1, char *p2)
 	{
 		i++;
 		p1++;
-	}
-	while (*p2)
-	{
-		i++;
-		p2++;
 	}
 	i++;
 	return (i);
@@ -48,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = malloc(1);
 		*s2 = '\0';
 	}
-	p = malloc((lenx2(s1, s2)) * sizeof(*p));
+	p = malloc((len(s1) + n) * sizeof(*p));
 	if (p != NULL)
 	{
 		while (s1[i])
