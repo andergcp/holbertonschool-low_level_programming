@@ -15,7 +15,6 @@ unsigned int len(char *p1)
 		i++;
 		p1++;
 	}
-	i++;
 	return (i);
 }
 
@@ -39,9 +38,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (size2 == 0)
 		s2 = "";
 	if (n <= size2)
-		p = malloc((size1 + n + 1) * sizeof(*p));
+		p = malloc((size1 + n + 1) * sizeof(char));
 	else
-		p = malloc((size1 + size2 + 1) * sizeof(*p));
+		p = malloc((size1 + size2 + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
 	while (s1[i])
@@ -51,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	i = 0;
 
-	while (i < n)
+	while (s2[i] && i < n)
 	{
 		p[j] = s2[i];
 		i++, j++;
