@@ -4,12 +4,11 @@
 /**
  * len - calculate the size of two strings
  * @p1: pointer to a char
- * @p2: pointer to a char
- * Return: int the size of p1 + p2
+ * Return: int the size of p1
  **/
-int len(char *p1)
+unsigned int len(char *p1)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	while (*p1)
 	{
@@ -43,7 +42,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = malloc(1);
 		*s2 = '\0';
 	}
-	p = malloc((len(s1) + n) * sizeof(*p));
+	if (n <= (len(s2) - 1))
+	{
+		p = malloc((len(s1) + n) * sizeof(*p));
+		if (p == NULL)
+			return (NULL);
+	}
+	if (n > (len(s2) - 1))
+	{
+		p = malloc((len(s1) + len(s2)) * sizeof(*p));
+		if (p == NULL)
+			return (NULL);
+	}
+
 	if (p != NULL)
 	{
 		while (s1[i])
