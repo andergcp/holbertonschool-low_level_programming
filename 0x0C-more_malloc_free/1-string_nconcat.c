@@ -9,6 +9,7 @@
 unsigned int len(char *p1)
 {
 	unsigned int i = 0;
+
 	if (p1 == NULL)
 		return (0);
 	while (*p1)
