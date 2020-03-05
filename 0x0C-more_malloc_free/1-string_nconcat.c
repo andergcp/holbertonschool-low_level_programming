@@ -15,6 +15,7 @@ unsigned int len(char *p1)
 		i++;
 		p1++;
 	}
+	i++;
 	return (i);
 }
 
@@ -28,42 +29,33 @@ unsigned int len(char *p1)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0, j = 0, size1, size2;
 	char *p;
 
-	if (s1 == NULL)
-	{
-		*s1 = '\0';
-	}
-	if (s2 == NULL)
-	{
-		*s2 = '\0';
-	}
-	if (n <= len(s2))
-	{
-		p = malloc((len(s1) + n + 1) * sizeof(*p));
-	}
-	if (n > len(s2))
-	{
-		p = malloc((len(s1) + len(s2) + 1) * sizeof(*p));
-	}
-	if (p != NULL)
-	{
-		while (s1[i])
-		{
-			p[j] = s1[i];
-			i++, j++;
-		}
-		i = 0;
-
-		while (s2[i] && i < n)
-		{
-			p[j] = s2[i];
-			i++, j++;
-		}
-		p[j] = '\0';
-		return (p);
-	}
+	size1 = len(s1);
+	size2 = len(s2);
+	if (size1 == 0)
+		s1 = "";
+	if (size2 == 0)
+		s2 = "";
+	if (n <= size2)
+		p = malloc((size1 + n + 1) * sizeof(*p));
 	else
+		p = malloc((size1 + size2 + 1) * sizeof(*p));
+	if (p == NULL)
 		return (NULL);
+	while (s1[i])
+	{
+		p[j] = s1[i];
+		i++, j++;
+	}
+	i = 0;
+
+	while (i < n)
+	{
+		p[j] = s2[i];
+		i++, j++;
+	}
+	p[j] = '\0';
+	return (p);
 }
