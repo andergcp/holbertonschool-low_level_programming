@@ -45,16 +45,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n <= (len(s2) - 1))
 	{
 		p = malloc((len(s1) + n) * sizeof(*p));
-		if (p == NULL)
-			return (NULL);
 	}
 	if (n > (len(s2) - 1))
 	{
-		p = malloc((len(s1) + len(s2)) * sizeof(*p));
-		if (p == NULL)
-			return (NULL);
+		p = malloc((len(s1) + len(s2) - 1) * sizeof(*p));
 	}
-
 	if (p != NULL)
 	{
 		while (s1[i])
