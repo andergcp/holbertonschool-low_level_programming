@@ -3,8 +3,7 @@
 
 /**
  * get_op_func - Assign the function according to operator
- * @a: integer a
- * @b: integer b
+ * @s: integer apointer to char , operator.
  * Return: function if matches exit otherwise if fails
  */
 int (*get_op_func(char *s))(int, int)
@@ -20,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while(i < 5)
+	while (i < 5)
 	{
 		if (*(ops[i]).op == *s && s[1] == '\0')
 			return (*(ops[i]).f);
