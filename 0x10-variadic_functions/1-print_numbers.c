@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
+ * print_numbers - print integers
+ * @separator: pointer to separator string
+ * @n: number of arguments
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -15,11 +15,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(vlist, n);
 
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
-		if(i != (n - 1) && separator)
+		if (i != (n - 1) && separator)
 			printf("%i%s", va_arg(vlist, int), separator);
-		else 
+		else
 			printf("%i", va_arg(vlist, int));
 	}
 	printf("\n");
