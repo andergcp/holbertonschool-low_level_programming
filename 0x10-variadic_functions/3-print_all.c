@@ -37,8 +37,9 @@ void print_charp(va_list v)
 {
 	char *s = va_arg(v, char *);
 
-	if (s)
-		printf("%s", s);
+	if (!s)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
@@ -49,6 +50,7 @@ void print_all(const char * const format, ...)
 {
 	va_list vlist;
 	int i = 0, j = 0;
+	char *separator = "";
 	t_f ftypes[] = {
 		{'c', print_char},
 		{'i', print_integer},
@@ -63,11 +65,13 @@ void print_all(const char * const format, ...)
 		while (ftypes[j].p)
 		{
 			if (format[i] == ftypes[j].p)
+			{			
+				printf("%s", separator);
 				ftypes[j].print_arg(vlist);
+				separator = ", ";
+			}
 			j++;
 		}
-		if (format[i + 1])
-			printf(", ");
 		j = 0;
 		i++;
 	}
