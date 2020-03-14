@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 		while (ftypes[j].p)
 		{
 			if (format[i] == ftypes[j].p)
-			{			
+			{
 				printf("%s", separator);
 				ftypes[j].print_arg(vlist);
 				separator = ", ";
