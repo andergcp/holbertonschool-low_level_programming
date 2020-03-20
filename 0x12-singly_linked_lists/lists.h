@@ -1,5 +1,5 @@
 #ifndef LISTS_HEADER
-#defince LISTS_HEADER
+#define LISTS_HEADER
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
