@@ -7,11 +7,12 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *aux = *head;
-
-	if (!aux || !*(head))
+	if (!head)
 		return;
-	free_listint2(&(aux->next));
-	free(aux);
-	*head = NULL;
+	if (*head)
+	{
+		free_listint2(&((*head)->next)));
+		free(*head);
+		*head = NULL;
+	}
 }
