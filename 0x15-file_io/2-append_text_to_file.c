@@ -15,9 +15,14 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	op = open(filename, O_RDWR | O_APPEND);
-	if (!text_content && op == 1)
-		return (close(op), 1);
-	if (!text_content && op == -1)
+	if (!text_content)
+	{
+		if (op == 1)
+			return (close(op), 1);
+		else if ( op == -1)
+			return (-1);
+	}
+	if (op == -1)
 		return (-1);
 
 	len = 0;
