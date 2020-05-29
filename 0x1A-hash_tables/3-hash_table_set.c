@@ -26,6 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			new_node->value = (void *)strdup(value);
 			return (1);
 		}
+		new_node = new_node->next;
 	}
 	new_node = malloc(sizeof(hash_node_t *) * 1);
 	if (!new_node)
