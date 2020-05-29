@@ -7,7 +7,6 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
-	hash_node_t nodes;
 	unsigned long int counter;
 
 /*Allocs memory for the hash table and validates its creation*/
@@ -19,7 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!new_table->array)
 		return (NULL);
 /*Assign size value in hash struct*/
-	new_table.size = size;
+	new_table->size = size;
 /*sets to NULL every node of the hash*/
 	for (counter = 0; counter < size; counter++)
 		new_table->array[counter] = NULL;
