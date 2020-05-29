@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(new_node->key, (void *)key) == 0)
 		{
 			free(new_node->value);
-			new_node->value = strdup(value);
+			new_node->value = (void *)strdup(value);
 			return (1);
 		}
 	}
