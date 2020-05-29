@@ -123,15 +123,17 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
-/**
+/*/**
  * shash_table_print_rev - print the hash tables key/value
  * pairs in reverse order
  * @ht: Hash table
  */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-
-}
+/*
+ *void shash_table_print_rev(const shash_table_t *ht)
+ *{
+ *
+ *}
+*/
 
 /**
  * shash_table_delete - deletes a hash table.
