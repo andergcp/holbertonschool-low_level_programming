@@ -19,6 +19,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 		return (NULL);
 /*Assign size value in hash struct*/
 	new_table->size = size;
+	new_table->shead = NULL;
+	new_table->stail = NULL;
 /*sets to NULL every node of the hash*/
 	for (counter = 0; counter < size; counter++)
 		new_table->array[counter] = NULL;
@@ -106,20 +108,17 @@ void shash_table_print(const shash_table_t *ht)
 	if (!ht)
 		return;
 	putchar('{');
-	while (i < ht->size)
-	{
-		tmp = ht->array[i];
+	tmp = ht->shead;
 
-		while (tmp)
-		{
-			if (j != 0)
-				printf(", ");
-			printf("'%s': '%s'", tmp->key, tmp->value);
-			tmp = tmp->next;
-			j++;
-		}
-		i++;
+	while (tmp)
+	{
+		if (j != 0)
+			printf(", ");
+		printf("'%s': '%s'", tmp->key, tmp->value);
+		tmp = tmp->snext;
+		j++;
 	}
+	i++;
 	printf("}\n");
 }
 
