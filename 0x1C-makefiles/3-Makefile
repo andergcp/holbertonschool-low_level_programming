@@ -1,0 +1,18 @@
+# -*- MakeFile -*-
+
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(SRC:%.c=%.o)
+NAME=holberton
+RM=
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+re: oclean all
+fclean: clean oclean
+clean:
+	rm -f *~ holberton
+oclean: 
+	rm -f $(OBJ)
+
