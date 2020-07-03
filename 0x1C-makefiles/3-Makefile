@@ -4,7 +4,7 @@ CC=gcc
 SRC=main.c holberton.c
 OBJ=$(SRC:%.c=%.o)
 NAME=holberton
-RM=
+RM=rm -f
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
@@ -12,7 +12,7 @@ all: $(OBJ)
 re: oclean all
 fclean: clean oclean
 clean:
-	rm -f *~ holberton
+	$(RM) *~ holberton
 oclean: 
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 
