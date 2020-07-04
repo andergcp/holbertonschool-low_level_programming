@@ -13,8 +13,11 @@ def island_perimeter(grid):
     '''
     perimeter = 0
     for row in range(len(grid)):
+        ''' Goes through rows in grid'''
         for col in range(len(grid[row])):
+            '''Goes through columns inside rows'''
             if grid[row][col] == 1:
+                '''Validates just went the cell's value is 1'''
                 if row == 0:
                     perimeter += 1
                 elif grid[row - 1][col] == 0:
